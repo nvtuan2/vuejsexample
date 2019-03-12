@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>my-project</title>
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- <div id="app">
+   <home></home>
+  </div> -->
+  <div id="data" class="container"
+    style="margin-top: 100px; margin-left: 200px; padding: 50px; background-color: lightblue">
+    <!-- <contact></contact>
+    <home></home>
+    <bind-component></bind-component>
+    <h2>User Form</h2>
+    <form v-if="show">
+      <div class="form-group">
+          FirstName: <label for="fname" v-text="firstName"></label>
+        <input class="form-control" id="fname" v-model="firstName">
+      </div>
+      <div class="form-group">
+        <label for="lname">LastName: {{lastName}}</label>
+        <input class="form-control" id="lname" v-model="lastName">
+      </div>
+    </form> -->
+    <div>
+      <h3 style="color: blue;"> Count = {{count}}</h3>
+      <button style="margin-top: 20px" type="button" class="btn btn-primary"
+        v-on:click="count++">You click me {{count}} times</button>
+    </div>
+    <!-- <div style="font-size: 20px; color:blueviolet">
+      <ul v-for="(food, index) in foods" :key="food.id">
+        <li>{{food.name}}  -  {{food.price}}</li>
+      </ul>
+    </div> -->
+    <!-- <h1 v-html="rawHTML"></h1><br>
+    <img v-bind:src="imageLink">
+    <p style="margin-top:30px; font-size: 40px"><a style="text-decoration: underline;" :href="url">Youtube</a></p> -->
+    <!-- <bind-component></bind-component>
+      <home></home> -->
+  </div>
+
+  <div id="example" class="container"
+    style="margin-top: 100px; margin-left: 200px; padding: 50px; background-color: lightblue">
+    <!-- <contact></contact> -->
+    <test-computed :send-text="propsdata.sendText"
+          :age="propsdata.age" :last-name="propsdata.lname" :first-name="propsdata.fname" :is-married="propsdata.isMarried">Youtube</test-computed>
+
+    <input type="text" v-model="propsdata.fname">
+    <input type="text" v-model="propsdata.lname">
+
+    <div>
+      <h3 style="color: blue;"> Count = {{count}}</h3>
+      <button style="margin-top: 20px" type="button" :class="classObj"
+        v-on:click="count++">You click me {{count}} times</button>
+    </div>
+
+    <div>
+      <slot-define url="http://youtube.com">Youtube</slot-define>
+    </div>
+
+    <div>
+      <slot-example>
+        <h2 slot="slot1" v-text="text1" style="color: red;"></h2>
+        <p slot="slot1" v-text="text2" style="font-size: 30px ;color: blueviolet"></p>
+        <p v-text="text2" style="font-size: 30px ;color: blue"></p>
+        <h1 v-text="text2" style="font-size: 30px ;color: green"></h1>
+      </slot-example>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
