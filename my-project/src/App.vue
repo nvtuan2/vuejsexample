@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <home></home>
+    <!-- <br><img src="./assets/logo.png"> -->
+    <!-- <home></home>
     <button type="button" @click="count++">You click me {{count}} times</button>
     <h2>Name: {{name}}</h2>
     <p :id="tagid" v-html="rawdata"></p>
     <input type="text" v-model="name">
     <br>
     <button type="submit" :disabled="!isButtonDisable" @click="reset">Submit</button>
-    <br>
-    <img :src="imageLink">
-    <div :class="[tuan, nguyen]">
+    <br> -->
+    <!-- <img :src="imageLink"> -->
+    <!-- <div :class="[tuan, nguyen]">
       <p :style="{fontSize:fontSize, color:color}">{{getCount*2 + 3}}</p>
       <p :style="{fontSize:fontSize, color:color}">class and style binding</p>
-    </div>
-    <div :class="classObject">
+    </div> -->
+    <!-- <div :class="classObject">
       <h2 v-if="show" :style="{fontSize:fontSize, color:color}">this is v-if using</h2>
-      <!-- <h2 v-show="show" :style="{fontSize:fontSize, color:color}">this is v-else using</h2> -->
-    </div>
-    <div>
+      <h2 v-show="show" :style="{fontSize:fontSize, color:color}">this is v-else using</h2>
+    </div> -->
+    <!-- <div>
       <br>
       <button type="button" @click="toggle">Toggle</button>
     </div>
@@ -26,9 +26,15 @@
       <ol>
         <li v-for="(item, index) in fruits" :key="item.id">{{index}} {{item.id}} - {{item.name}}</li>
       </ol>
-    </div>
-    <!-- <router-view/> -->
-    <div>
+    </div> -->
+    <router-view/>
+    <nav>
+     <router-link to="/">HelloWorld</router-link>
+    <router-link to="/contact">Contact</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/home">Home</router-link>
+    </nav>
+    <!-- <div>
       <input type="text" @input="changeText">
     </div>
     <div>
@@ -55,8 +61,8 @@
       <label for="two">Two</label>
       <br>
       <p>Picked: {{picked}}</p>
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
       <select v-model="selected">
         <option disabled value>Please select one</option>
         <option>Bike</option>
@@ -83,21 +89,23 @@
       <h2>Number: {{count*5}}</h2>
     </div>
     <div>
-      <!-- <blog-post title="study VueJS" :likes="500" :isPublished="true" :commentIds="[100, 200, 300]" :author="{name: 'Pattinson Nguyen', company: 'CMC Global'}"></blog-post> -->
+      <blog-post title="study VueJS" :likes="500" :isPublished="true" :commentIds="[100, 200, 300]" :author="{name: 'Pattinson Nguyen', company: 'CMC Global'}"></blog-post>
       <blog-post>
         <p slot="item1">Toi la tuan, nguyen van tuan</p>
         <h1 slot="item2">this is behind slot</h1>
         <h1 slot="item3">this is behind slot</h1>
-        <!-- <button slot="item4"></button> -->
+        <button slot="item4"></button>
       </blog-post>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-// import HelloWorld from '@/components/HelloWorld'
+import HelloWorld from '@/components/HelloWorld'
 import Vue from "vue";
-import home from "@/components/home";
+import home from "@/components/home"
+import about from "@/components/about"
+import contact from "@/components/contact"
 
 Vue.component("blog-post", home);
 

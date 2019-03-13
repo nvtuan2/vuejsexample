@@ -11,19 +11,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      // name: 'HelloWorld',
+      name: 'HelloWorld',
       component: HelloWorld
-    },    {
+    },
+    {
       path: '/contact',
-      // name: 'contact',
+      name: 'contact',
       component: contact
     },    {
       path: '/about',
-      // name: 'about',
+      name: 'about',
       component: about
     },    {
       path: '/home',
-      // name: 'home',
+      name: 'home',
       component: home
     }
   ]
