@@ -21,6 +21,14 @@
   </div> -->
   <div id="data" class="container"
     style="margin-top: 100px; margin-left: 200px; padding: 50px; background-color: lightblue">
+    <div>
+      <keep-alive>
+        <component :is="component"></component>
+      </keep-alive>
+      <button @click="component = 'component-1'">Home Component</button>
+      <button @click="component = 'component-2'">About Component</button>
+      <button @click="component = 'component-3'">Contact Component</button>
+    </div>
     <!-- <contact></contact>
     <home></home>
     <bind-component></bind-component>

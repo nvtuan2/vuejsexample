@@ -2,6 +2,7 @@
 
   <section class="about">
     <h1>about Component</h1>
+    <input type="text" v-model="text" style="margin-bottom: 20px;">
     <!-- <contact></contact> -->
     <!-- <pattinson></pattinson> -->
     <!-- <router-link to="/contact">Contact</router-link>
@@ -26,7 +27,7 @@ import contact from '@/components/contact'
     },
     data() {
       return {
-
+        text: '',
       }
     },
     methods: {

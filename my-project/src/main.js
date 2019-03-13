@@ -129,8 +129,15 @@ var vm1 = new Vue({
       {name: 'Kimchi', price: '$5'},
       {name: 'Pho', price: '$10'},
       {name: 'Banh Chung', price: '$15'},
-    ]
+    ],
+    component: 'component-1',
   },
+  components: {
+    'component-1': home,
+    'component-2': about,
+    'component-3': contact,
+  },
+
   beforeCreate: function() {
     console.log('beforeCreated');
   },

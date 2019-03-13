@@ -2,6 +2,7 @@
 
   <section class="home">
     <h1>home Component</h1>
+    <input type="text" v-model="text" style="margin-bottom: 20px;">
     <!-- <h2 style="color: blue;">{{title}} - {{likes}} - {{isPublished}} - {{commentIds}} - {{author}}</h2> -->
     <!-- <tuan></tuan> -->
         <!-- <router-link to="/contact">Contact</router-link>
@@ -41,7 +42,7 @@
     },
     data() {
       return {
-
+        text: '',
       }
     },
     methods: {
